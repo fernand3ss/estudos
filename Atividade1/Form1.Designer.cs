@@ -36,7 +36,7 @@
             label5 = new Label();
             tbName = new TextBox();
             this.tbPreço = new TextBox();
-            textBox3 = new TextBox();
+            tbQuantidade = new TextBox();
             textBox4 = new TextBox();
             dataGridView1 = new DataGridView();
             button1 = new Button();
@@ -105,12 +105,12 @@
             this.tbPreço.Size = new Size(125, 27);
             this.tbPreço.TabIndex = 6;
             // 
-            // textBox3
+            // tbQuantidade
             // 
-            textBox3.Location = new Point(12, 220);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 7;
+            tbQuantidade.Location = new Point(12, 220);
+            tbQuantidade.Name = "tbQuantidade";
+            tbQuantidade.Size = new Size(125, 27);
+            tbQuantidade.TabIndex = 7;
             // 
             // textBox4
             // 
@@ -172,7 +172,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(tbQuantidade);
             Controls.Add(this.tbPreço);
             Controls.Add(tbName);
             Controls.Add(label5);
@@ -204,5 +204,6 @@
         private Button button2;
         private Label label6;
         private ContextMenuStrip contextMenuStrip1;
+        private TextBox tbQuantidade;
     }
 }
