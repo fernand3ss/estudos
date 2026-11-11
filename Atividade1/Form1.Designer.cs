@@ -31,19 +31,19 @@
             components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
+            lbQuantidade = new Label();
             label4 = new Label();
             label5 = new Label();
             tbName = new TextBox();
-            this.tbPreço = new TextBox();
+            tbPreco = new TextBox();
             tbQuantidade = new TextBox();
-            textBox4 = new TextBox();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
+            tbCategoria = new TextBox();
+            dgLista = new DataGridView();
+            btnCadastrar = new Button();
             button2 = new Button();
             label6 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgLista).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -65,14 +65,14 @@
             label2.Text = "Preço";
             label2.Click += label2_Click;
             // 
-            // label3
+            // lbQuantidade
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(39, 188);
-            label3.Name = "label3";
-            label3.Size = new Size(87, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Quantidade";
+            lbQuantidade.AutoSize = true;
+            lbQuantidade.Location = new Point(39, 188);
+            lbQuantidade.Name = "lbQuantidade";
+            lbQuantidade.Size = new Size(87, 20);
+            lbQuantidade.TabIndex = 2;
+            lbQuantidade.Text = "Quantidade";
             // 
             // label4
             // 
@@ -98,12 +98,12 @@
             tbName.Size = new Size(125, 27);
             tbName.TabIndex = 5;
             // 
-            // tbPreço
+            // tbPreco
             // 
-            this.tbPreço.Location = new Point(12, 142);
-            this.tbPreço.Name = "tbPreço";
-            this.tbPreço.Size = new Size(125, 27);
-            this.tbPreço.TabIndex = 6;
+            tbPreco.Location = new Point(12, 142);
+            tbPreco.Name = "tbPreco";
+            tbPreco.Size = new Size(125, 27);
+            tbPreco.TabIndex = 6;
             // 
             // tbQuantidade
             // 
@@ -112,31 +112,32 @@
             tbQuantidade.Size = new Size(125, 27);
             tbQuantidade.TabIndex = 7;
             // 
-            // textBox4
+            // tbCategoria
             // 
-            textBox4.Location = new Point(12, 289);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 8;
-            textBox4.TextChanged += textBox4_TextChanged;
+            tbCategoria.Location = new Point(12, 289);
+            tbCategoria.Name = "tbCategoria";
+            tbCategoria.Size = new Size(125, 27);
+            tbCategoria.TabIndex = 8;
+            tbCategoria.TextChanged += textBox4_TextChanged;
             // 
-            // dataGridView1
+            // dgLista
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(335, 89);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(300, 188);
-            dataGridView1.TabIndex = 9;
+            dgLista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgLista.Location = new Point(335, 47);
+            dgLista.Name = "dgLista";
+            dgLista.RowHeadersWidth = 51;
+            dgLista.Size = new Size(453, 344);
+            dgLista.TabIndex = 9;
             // 
-            // button1
+            // btnCadastrar
             // 
-            button1.Location = new Point(186, 117);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 10;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnCadastrar.Location = new Point(186, 117);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(94, 29);
+            btnCadastrar.TabIndex = 10;
+            btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += button1_Click;
             // 
             // button2
             // 
@@ -144,17 +145,18 @@
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 11;
-            button2.Text = "button2";
+            button2.Text = "Limpar";
             button2.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(462, 66);
+            label6.Location = new Point(513, 24);
             label6.Name = "label6";
-            label6.Size = new Size(50, 20);
+            label6.Size = new Size(95, 20);
             label6.TabIndex = 12;
-            label6.Text = "label6";
+            label6.Text = "Lista de Itens";
+            label6.Click += label6_Click;
             // 
             // contextMenuStrip1
             // 
@@ -169,21 +171,21 @@
             ClientSize = new Size(800, 450);
             Controls.Add(label6);
             Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox4);
+            Controls.Add(btnCadastrar);
+            Controls.Add(dgLista);
+            Controls.Add(tbCategoria);
             Controls.Add(tbQuantidade);
-            Controls.Add(this.tbPreço);
+            Controls.Add(tbPreco);
             Controls.Add(tbName);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(lbQuantidade);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load_1;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgLista).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,11 +201,14 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
-        private DataGridView dataGridView1;
-        private Button button1;
+        private DataGridView dgLista;
+        private Button btnCadastrar;
         private Button button2;
         private Label label6;
         private ContextMenuStrip contextMenuStrip1;
         private TextBox tbQuantidade;
+        private Label lbQuantidade;
+        private TextBox tbPreco;
+        private TextBox tbCategoria;
     }
 }

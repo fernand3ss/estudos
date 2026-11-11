@@ -36,6 +36,34 @@ namespace Atividade1
         {
 
         }
+
+        List<object> itens = new List<object>();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var item = new
+            {
+                Name = tbName.Text,
+                Preco = tbPreco.Text,
+                Quantidade = tbQuantidade.Text,
+                Categoria = tbCategoria.Text
+            };
+
+            itens.Add(item);
+
+            dgLista.DataSource = null;
+            dgLista.DataSource = itens;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
