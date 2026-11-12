@@ -141,12 +141,13 @@
             // 
             // button2
             // 
-            button2.Location = new Point(186, 202);
+            button2.Location = new Point(186, 201);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 11;
             button2.Text = "Limpar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
             // label6
             // 
