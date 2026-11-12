@@ -67,14 +67,8 @@ namespace Atividade1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            var item = new
-            {
-                Name = tbName.Text,
-                Preco = tbPreco.Text,
-                Quantidade = tbQuantidade.Text,
-                Categoria = tbCategoria.Text
-            };
-            itens.Remove(item);
+          
+            itens.Clear();
             
             dgLista.DataSource = null;
             dgLista.DataSource = itens;
