@@ -211,5 +211,6 @@
         private Label lbQuantidade;
         private TextBox tbPreco;
         private TextBox tbCategoria;
+        private Button btRemove;
     }
 }
