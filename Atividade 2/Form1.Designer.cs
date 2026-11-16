@@ -40,10 +40,10 @@
             tbCategoria = new Button();
             tbQuantidade = new Button();
             tbPreco = new Button();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            tbName = new Label();
+            lblCategoria = new Label();
+            lblQuantidade = new Label();
+            lblPreco = new Label();
+            lblNome = new Label();
             tabPage2 = new TabPage();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -68,7 +68,7 @@
             tabPage1.Controls.Add(groupBox1);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 3, 3, 3);
+            tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1267, 815);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "1";
@@ -116,10 +116,10 @@
             groupBox1.Controls.Add(tbCategoria);
             groupBox1.Controls.Add(tbQuantidade);
             groupBox1.Controls.Add(tbPreco);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(tbName);
+            groupBox1.Controls.Add(lblCategoria);
+            groupBox1.Controls.Add(lblQuantidade);
+            groupBox1.Controls.Add(lblPreco);
+            groupBox1.Controls.Add(lblNome);
             groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(0, 7);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
@@ -189,52 +189,52 @@
             tbPreco.TabIndex = 6;
             tbPreco.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblCategoria
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(13, 161);
-            label4.Name = "label4";
-            label4.Size = new Size(160, 19);
-            label4.TabIndex = 4;
-            label4.Text = "Categoria do Produto:";
+            lblCategoria.AutoSize = true;
+            lblCategoria.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCategoria.Location = new Point(13, 161);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(160, 19);
+            lblCategoria.TabIndex = 4;
+            lblCategoria.Text = "Categoria do Produto:";
             // 
-            // label3
+            // lblQuantidade
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(13, 108);
-            label3.Name = "label3";
-            label3.Size = new Size(173, 19);
-            label3.TabIndex = 3;
-            label3.Text = "Quantidade em estoque:";
+            lblQuantidade.AutoSize = true;
+            lblQuantidade.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQuantidade.Location = new Point(13, 108);
+            lblQuantidade.Name = "lblQuantidade";
+            lblQuantidade.Size = new Size(173, 19);
+            lblQuantidade.TabIndex = 3;
+            lblQuantidade.Text = "Quantidade em estoque:";
             // 
-            // label2
+            // lblPreco
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(58, 219);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 19);
-            label2.TabIndex = 2;
-            label2.Text = "Preço:";
+            lblPreco.AutoSize = true;
+            lblPreco.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPreco.Location = new Point(58, 219);
+            lblPreco.Name = "lblPreco";
+            lblPreco.Size = new Size(52, 19);
+            lblPreco.TabIndex = 2;
+            lblPreco.Text = "Preço:";
             // 
-            // tbName
+            // lblNome
             // 
-            tbName.AutoSize = true;
-            tbName.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tbName.Location = new Point(13, 49);
-            tbName.Name = "tbName";
-            tbName.Size = new Size(135, 19);
-            tbName.TabIndex = 0;
-            tbName.Text = "Nome do Produto:";
-            tbName.Click += label1_Click;
+            lblNome.AutoSize = true;
+            lblNome.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNome.Location = new Point(13, 49);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(135, 19);
+            lblNome.TabIndex = 0;
+            lblNome.Text = "Nome do Produto:";
+            lblNome.Click += label1_Click;
             // 
             // tabPage2
             // 
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 3, 3, 3);
+            tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1267, 815);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
@@ -269,14 +269,14 @@
         private TabPage tabPage3;
         private TabPage tabPage4;
         private Button button1;
-        private Label tbName;
+        private Label lblNome;
         private Button btCadastrar;
         private Button tbCategoria;
         private Button tbQuantidade;
         private Button tbPreco;
-        private Label label4;
-        private Label label3;
-        private Label label2;
+        private Label lblCategoria;
+        private Label lblQuantidade;
+        private Label lblPreco;
         private Button btName;
         private DataGridView dataGridView1;
     }
